@@ -118,6 +118,7 @@ export function TeamCreation({ onTeamCreated, onClose }: TeamCreationProps) {
               size="icon"
               onClick={onClose}
               className="hover:bg-rose-blush/10 dark:hover:bg-moonlit-lavender/10"
+              aria-label="Close"
             >
               <X className="w-5 h-5" />
             </Button>
@@ -155,6 +156,7 @@ export function TeamCreation({ onTeamCreated, onClose }: TeamCreationProps) {
                   <button
                     key={color.name}
                     onClick={() => setSelectedColor(color)}
+                    aria-label={`Select ${color.name} color`}
                     className={`relative p-4 rounded-2xl border-2 transition-all duration-300 ${
                       selectedColor.name === color.name
                         ? 'border-rose-blush dark:border-moonlit-lavender shadow-lg scale-105'
@@ -288,6 +290,7 @@ export function TeamCreation({ onTeamCreated, onClose }: TeamCreationProps) {
                         size="icon"
                         onClick={() => removeMember(member.id)}
                         className="hover:bg-destructive/10 hover:text-destructive"
+                        aria-label={`Remove ${member.name}`}
                       >
                         <X className="w-4 h-4" />
                       </Button>
