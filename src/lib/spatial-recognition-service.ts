@@ -1,4 +1,4 @@
-import { MeasurementPreset } from './types'
+import type { MeasurementPreset } from './types'
 
 export interface RoomTemplate {
   id: string
